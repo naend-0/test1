@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>出席確認ページト</title>
+  <link rel="icon" href="favicon.ico">
+  <meta name="description" content="出席確認">
+</head>
+<body>
+  <header>
+    <!--
+      ol: (o)rdered (l)ist
+      ul: (u)nordered (l)ist
+
+      li: (l)ist (i)tem
+    -->
+    <nav>
+      <section>
+        <img src="img/dendai.png" width="650" height="100" alt="denndai バナー">
+
+      </section>
+      <ul>
+            <!--
+            リアルタイム時計
+            -->
+            <span id="view_clock"></span>
+
+            <script type="text/javascript">
+            timerID = setInterval('clock()',500); //0.5秒毎にclock()を実行
+
+            function clock() {
+            	document.getElementById("view_clock").innerHTML = getNow();
+            }
+
+            function getNow() {
+            	var now = new Date();
+            	var year = now.getFullYear();
+            	var mon = now.getMonth()+1; //１を足すこと
+            	var day = now.getDate();
+            	var hour = now.getHours();
+            	var min = now.getMinutes();
+            	var sec = now.getSeconds();
+
+            	//出力用
+            	var s = "現在時刻:"+year + "年" + mon + "月" + day + "日" + hour + "時" + min + "分" + sec + "秒";
+            	return s;
+            }
+            </script>
+            <hr>
+
+        <li>
+          <a href="index.html">
+          HOME
+          </a>
+        </li>
+        <li>
+          <a href="https://portal.sa.dendai.ac.jp/uprx/">
+          電大ユニパログイン
+          </a>
+        </li>
+        <li>
+          <a href="https://www.dendai.ac.jp">
+          電大公式HP
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <img src="img/icon.png" width="300" height="300" alt="出席アイコン">
+    <h1>電大出席ページ</h1>
+    <p>
+    <a href="login.html">ログインページ</a>
+  </p>
+    <p>電大出席ページ</p>
+
+
+
+
+
+  </section>
+  <hr>
+  <footer>
+    <p>(c) Dencom Project</p>
+  </footer>
+</body>
+</html>
